@@ -23,5 +23,25 @@ def get_random_school(filename):
     return random_line
 
 
+def main():
+    # Display Options
+    print('Select an Option.')
+    print('')
+    print('1. Select one object')
+    print('2. Shuffle list of objects')
+    print('') 
+    # Get the user's choice
+    choice = input("Enter a choice ( 1 or 2 ): ")
+    print('')
+    # Perform operation based upon user choice
+    if choice == '1':
+        print(get_random_school(filename))
+    elif choice == '2':
+        print(shuffle_and_print_items(filename))
+    else:
+        print('Invalid object')
+
+
 if __name__ == '__main__':
     filename = sys.argv[1]
+    main()
